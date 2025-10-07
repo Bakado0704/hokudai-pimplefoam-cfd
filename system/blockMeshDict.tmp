@@ -1,0 +1,66 @@
+/*--------------------------------*- C++ -*----------------------------------*\\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+convertToMeters 1;
+
+// Room size: 4 m (x) x 4 m (y) x 3 m (z)
+
+vertices
+(
+    (0 0 0)
+    (5 0 0)
+    (5 3 0)
+    (0 3 0)
+    (0 0 2.3)
+    (5 0 2.3)
+    (5 3 2.3)
+    (0 3 2.3)
+);
+
+blocks
+(
+    hex (0 1 2 3 4 5 6 7) (50 30 23) simpleGrading (1 1 1)
+);
+
+boundary
+(
+    inlet
+    {
+        type patch;
+        faces ((0 4 7 3)); // x=0 face (side inlet)
+    }
+
+    outlet
+    {
+        type patch;
+        faces ((4 5 6 7)); // ceiling z=3 (top outlet)
+    }
+
+    walls
+    {
+        type wall;
+        faces
+        (
+            (0 1 5 4) // y=0 face (vertical)
+            (3 7 6 2) // y=4 face (vertical)
+            (0 3 2 1) // floor z=0
+            (1 2 6 5) // x=4 face (side becomes wall)
+        );
+    }
+);
+
+mergePatchPairs();
+
+// ************************************************************************* //

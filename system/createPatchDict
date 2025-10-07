@@ -1,0 +1,41 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |
+| \\      /  Field         | OpenFOAM: The Open Source CFD Toolbox
+|  \\    /   Operation     | Website:  https://openfoam.org
+|   \\  /    And           | Version:  12
+|    \\/     Manipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    object      createPatchDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+pointSync true;
+
+// Create an outlet patch from the selected ceiling faces
+patches
+(
+    {
+        name            outlet;
+        patchInfo
+        {
+            type        patch;
+        }
+        constructFrom   set;
+        set             outletFaceSet;
+    }
+    {
+        name            inlet;
+        patchInfo
+        {
+            type        patch;
+        }
+        constructFrom   set;
+        set             inletFaceSet;
+    }
+);
+
+// ************************************************************************* //

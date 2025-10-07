@@ -1,0 +1,123 @@
+/*--------------------------------*- C++ -*----------------------------------*\\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      cloudProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+type        cloud;
+
+solution
+{
+    coupled         false;
+    transient       yes;
+    cellValueSourceCorrection off;
+    maxCo           0.5;
+
+    interpolationSchemes
+    {
+        rho             cell;
+        U               cellPoint;
+        mu              cell;
+    }
+
+    integrationSchemes
+    {
+        U               Euler;
+    }
+}
+
+constantProperties
+{
+    // Revert particle density to original
+    rho0            1000;   // kg/m3
+}
+
+subModels
+{
+    particleForces
+    {
+        sphereDrag;
+        gravity;
+    }
+
+    injectionModels
+    {
+        roomSeed
+        {
+            // One-time uniform seeding within a cellZone
+            type                cellZoneInjection;
+            SOI                 0;          // start of injection [s]
+            duration            0.01;       // short burst
+            nParticle           50000;      // real particles per parcel
+            // Target ~100 parcels over 0.01 s in 48 m3
+            numberDensity       208.33;     // parcels/m3/s
+
+            // Inject uniformly within this cellZone (created by topoSet)
+            cellZone            roomZone;
+
+            // No initial velocity bias
+            U0                  (0 0 0);
+
+            sizeDistribution
+            {
+                type            fixedValue;
+                value           1e-06;      // 1 micron
+            }
+        }
+    }
+
+    // Add turbulent dispersion supported in this solver
+    dispersionModel stochasticDispersionRAS;
+    stochasticDispersionRASCoeffs
+    {
+        Cn 5.0;
+    }
+
+    // Prevent escape at outlet/inlet by reflecting parcels
+    patchInteractionModel localInteraction;
+    localInteractionCoeffs
+    {
+        patches
+        (
+            walls
+            {
+                type rebound;
+                e    1.0;   // elastic bounce
+                mu   1.0;   // preserve tangential velocity
+            }
+            ceiling
+            {
+                type rebound;
+                e    1.0;
+                mu   1.0;
+            }
+            outlet
+            {
+                // Let particles leave through the exhaust
+                type escape;
+            }
+            inlet
+            {
+                type rebound;
+                e    1.0;
+                mu   1.0;
+            }
+        );
+    }
+
+    surfaceFilmModel none;
+
+    stochasticCollisionModel none;
+}
+
+// ************************************************************************* //

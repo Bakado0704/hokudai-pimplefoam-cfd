@@ -16,10 +16,10 @@ incompressibleFluid solver module executed by the foamRun application:
 \*---------------------------------------------------------------------------*/
 Build  : 12-8e8552546d20
 Exec   : C:/BLUECF~1/2024/OpenFOAM-12/platforms/mingw_w64Gcc122DPInt32Opt/bin/foamRun.exe -solver incompressibleFluid
-Date   : Oct 07 2025
-Time   : 22:33:06
+Date   : Oct 10 2025
+Time   : 23:45:11
 Host   : "DESKTOP-71MJVT3"
-PID    : 35608
+PID    : 27996
 I/O    : uncollated
 Case   : C:/blueCFD-Core/2024/ofuser-of12/run/kado
 nProcs : 1
@@ -130,7 +130,7 @@ time step continuity errors : sum local = 9.36239e-09, global = -8.5574e-10, cum
 smoothSolver:  Solving for epsilon, Initial residual = 0.0103055, Final residual = 1.3544e-06, No Iterations 2
 smoothSolver:  Solving for k, Initial residual = 1, Final residual = 4.64609e-07, No Iterations 4
 bounding k, min: -0.000489459 max: 0.00613596 average: 0.000153114
-ExecutionTime = 2.577 s  ClockTime = 3 s
+ExecutionTime = 0.552 s  ClockTime = 1 s
 
 Courant Number mean: 0.0153993 max: 0.797983
 Time = 0.2s
@@ -168,7 +168,7 @@ GAMG:  Solving for p, Initial residual = 0.0775342, Final residual = 6.49708e-07
 time step continuity errors : sum local = 8.20868e-10, global = 7.05883e-11, cumulative = -7.85152e-10
 smoothSolver:  Solving for epsilon, Initial residual = 0.0771769, Final residual = 8.03781e-06, No Iterations 31
 smoothSolver:  Solving for k, Initial residual = 0.632595, Final residual = 8.06772e-06, No Iterations 47
-ExecutionTime = 2.852 s  ClockTime = 3 s
+ExecutionTime = 0.82 s  ClockTime = 1 s
 
 Courant Number mean: 0.0154128 max: 0.723478
 Time = 0.3s
@@ -206,7 +206,7 @@ GAMG:  Solving for p, Initial residual = 0.0852547, Final residual = 6.15553e-07
 time step continuity errors : sum local = 5.57607e-10, global = -5.01154e-11, cumulative = -8.35267e-10
 smoothSolver:  Solving for epsilon, Initial residual = 0.176602, Final residual = 8.93305e-06, No Iterations 12
 smoothSolver:  Solving for k, Initial residual = 0.369043, Final residual = 8.80702e-06, No Iterations 19
-ExecutionTime = 3.037 s  ClockTime = 3 s
+ExecutionTime = 0.992 s  ClockTime = 1 s
 
 Courant Number mean: 0.0155042 max: 0.704211
 Time = 0.4s
@@ -244,7 +244,7 @@ GAMG:  Solving for p, Initial residual = 0.10753, Final residual = 4.80329e-07, 
 time step continuity errors : sum local = 5.05013e-10, global = -4.30154e-11, cumulative = -8.78283e-10
 smoothSolver:  Solving for epsilon, Initial residual = 0.079427, Final residual = 6.67886e-06, No Iterations 14
 smoothSolver:  Solving for k, Initial residual = 0.347031, Final residual = 7.4706e-06, No Iterations 32
-ExecutionTime = 3.277 s  ClockTime = 4 s
+ExecutionTime = 1.225 s  ClockTime = 2 s
 
 Courant Number mean: 0.0156654 max: 0.703164
 Time = 0.5s
@@ -282,7 +282,7 @@ GAMG:  Solving for p, Initial residual = 0.340604, Final residual = 7.20668e-07,
 time step continuity errors : sum local = 6.0049e-10, global = 4.59978e-11, cumulative = -8.32285e-10
 smoothSolver:  Solving for epsilon, Initial residual = 0.0507962, Final residual = 5.32226e-06, No Iterations 5
 smoothSolver:  Solving for k, Initial residual = 0.374709, Final residual = 8.19721e-06, No Iterations 39
-ExecutionTime = 3.551 s  ClockTime = 4 s
+ExecutionTime = 1.489 s  ClockTime = 2 s
 
 Courant Number mean: 0.0158231 max: 0.72777
 Time = 0.6s
@@ -320,7 +320,7 @@ GAMG:  Solving for p, Initial residual = 0.20565, Final residual = 6.98187e-07, 
 time step continuity errors : sum local = 4.26851e-10, global = -2.03033e-11, cumulative = -8.52588e-10
 smoothSolver:  Solving for epsilon, Initial residual = 0.0403803, Final residual = 4.95433e-06, No Iterations 4
 smoothSolver:  Solving for k, Initial residual = 0.0770242, Final residual = 8.0886e-06, No Iterations 19
-ExecutionTime = 3.765 s  ClockTime = 4 s
+ExecutionTime = 1.7 s  ClockTime = 2 s
 
 Courant Number mean: 0.0156703 max: 0.723887
 Time = 0.7s
@@ -358,7 +358,7 @@ GAMG:  Solving for p, Initial residual = 0.076853, Final residual = 7.30392e-07,
 time step continuity errors : sum local = 2.80116e-10, global = 3.36798e-11, cumulative = -8.18908e-10
 smoothSolver:  Solving for epsilon, Initial residual = 0.0225463, Final residual = 9.25026e-06, No Iterations 3
 smoothSolver:  Solving for k, Initial residual = 0.0248062, Final residual = 3.82987e-06, No Iterations 5
-ExecutionTime = 3.92 s  ClockTime = 4 s
+ExecutionTime = 1.856 s  ClockTime = 2 s
 
 Courant Number mean: 0.0156064 max: 0.742345
 Time = 0.8s
@@ -396,7 +396,7 @@ GAMG:  Solving for p, Initial residual = 0.0237997, Final residual = 7.10876e-07
 time step continuity errors : sum local = 2.36383e-10, global = -6.72465e-12, cumulative = -8.25633e-10
 smoothSolver:  Solving for epsilon, Initial residual = 0.0151456, Final residual = 2.1349e-06, No Iterations 3
 smoothSolver:  Solving for k, Initial residual = 0.0205008, Final residual = 7.51868e-06, No Iterations 4
-ExecutionTime = 4.067 s  ClockTime = 4 s
+ExecutionTime = 1.996 s  ClockTime = 2 s
 
 Courant Number mean: 0.0155657 max: 0.757396
 Time = 0.9s
@@ -434,7 +434,7 @@ GAMG:  Solving for p, Initial residual = 0.0182345, Final residual = 5.36853e-07
 time step continuity errors : sum local = 1.69571e-10, global = 1.35152e-11, cumulative = -8.12118e-10
 smoothSolver:  Solving for epsilon, Initial residual = 0.0130313, Final residual = 8.44269e-07, No Iterations 3
 smoothSolver:  Solving for k, Initial residual = 0.0191658, Final residual = 3.93319e-06, No Iterations 4
-ExecutionTime = 4.214 s  ClockTime = 4 s
+ExecutionTime = 2.134 s  ClockTime = 2 s
 
 Courant Number mean: 0.0155386 max: 0.771331
 Time = 1s
@@ -472,7 +472,7 @@ GAMG:  Solving for p, Initial residual = 0.0158177, Final residual = 7.80675e-07
 time step continuity errors : sum local = 2.41783e-10, global = 2.29674e-11, cumulative = -7.89151e-10
 smoothSolver:  Solving for epsilon, Initial residual = 0.0133814, Final residual = 7.97016e-07, No Iterations 3
 smoothSolver:  Solving for k, Initial residual = 0.0176223, Final residual = 2.11774e-06, No Iterations 4
-ExecutionTime = 4.778 s  ClockTime = 5 s
+ExecutionTime = 2.668 s  ClockTime = 3 s
 
 End
 

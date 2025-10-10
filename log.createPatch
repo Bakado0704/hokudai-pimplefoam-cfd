@@ -10,10 +10,10 @@
 \*---------------------------------------------------------------------------*/
 Build  : 12-8e8552546d20
 Exec   : C:/BLUECF~1/2024/OpenFOAM-12/platforms/mingw_w64Gcc122DPInt32Opt/bin/createPatch.exe -overwrite
-Date   : Oct 07 2025
-Time   : 22:33:05
+Date   : Oct 10 2025
+Time   : 23:45:11
 Host   : "DESKTOP-71MJVT3"
-PID    : 38596
+PID    : 36376
 I/O    : uncollated
 Case   : C:/blueCFD-Core/2024/ofuser-of12/run/kado
 nProcs : 1

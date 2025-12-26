@@ -58,7 +58,7 @@ subModels
             type                cellZoneInjection;
             SOI                 0;          // start of injection [s]
             duration            0.01;       // short burst
-            nParticle           50000;      // real particles per parcel
+            nParticle           1000000;      // real particles per parcel
             // Target ~100 parcels over 0.01 s in 48 m3
             numberDensity       208.33;     // parcels/m3/s
 

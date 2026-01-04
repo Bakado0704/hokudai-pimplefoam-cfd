@@ -30,7 +30,7 @@ boundaryField
     {
         // Exhaust: specify volumetric flow rate to pull air out
         type                flowRateOutletVelocity;
-        volumetricFlowRate  constant 0.35; // 5ACH = 0.35 2.5ACH = 0.175 1ACH = 0.07
+        volumetricFlowRate  constant 0.07; // 5ACH = 0.35 2.5ACH = 0.175 1ACH = 0.07
         value               uniform (0 0 0);
     }
 

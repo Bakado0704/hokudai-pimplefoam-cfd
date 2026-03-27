@@ -5,29 +5,18 @@
     \\  /    A nd           | Version:  12
      \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
+/*   Windows 32 and 64 bit porting by blueCAPE: http://www.bluecape.com.pt   *\
+|  Based on Windows porting (2.0.x v4) by Symscape: http://www.symscape.com   |
+\*---------------------------------------------------------------------------*/
 FoamFile
 {
     format      ascii;
-    class       dictionary;
-    location    "system";
-    object      controlDict;
+    class       scalarField;
+    location    "1/lagrangian/cloud";
+    object      nParticle;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     pimpleFoam;
-
-startFrom       startTime;
-startTime       0;
-
-stopAt          endTime;
-endTime         1;
-
-deltaT          0.1;
-
-writeControl    timeStep;
-writeInterval   10;
-
-purgeWrite      0;
-
+7171{50000}
 
 // ************************************************************************* //

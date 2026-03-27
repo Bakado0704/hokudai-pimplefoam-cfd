@@ -1,0 +1,43 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+/*   Windows 32 and 64 bit porting by blueCAPE: http://www.bluecape.com.pt   *\
+|  Based on Windows porting (2.0.x v4) by Symscape: http://www.symscape.com   |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "1/uniform/lagrangian/cloud";
+    object      cloudOutputProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+injectionModel
+{
+    roomSeed
+    {
+        massInjected    1.88155e-07;
+        nInjections     10;
+        parcelsAddedTotal 7187;
+        timeStep0       1;
+    }
+}
+
+patchInteractionModel
+{
+    localInteraction
+    {
+        nEscape         4 ( 0 0 16 0 );
+        massEscape      4 ( 0 0 4.18879e-10 0 );
+        nStick          4 { 0 };
+        massStick       4 { 0 };
+    }
+}
+
+
+// ************************************************************************* //

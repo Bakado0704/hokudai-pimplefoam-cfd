@@ -1,0 +1,478 @@
+
+pimpleFoam has been superseded and replaced by the more general
+incompressibleFluid solver module executed by the foamRun application:
+
+    foamRun -solver incompressibleFluid
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  12
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+/*   Windows 32 and 64 bit porting by blueCAPE: http://www.bluecape.com.pt   *\
+|  Based on Windows porting (2.0.x v4) by Symscape: http://www.symscape.com   |
+\*---------------------------------------------------------------------------*/
+Build  : 12-8e8552546d20
+Exec   : C:/BLUECF~1/2024/OpenFOAM-12/platforms/mingw_w64Gcc122DPInt32Opt/bin/foamRun.exe -solver incompressibleFluid
+Date   : Oct 10 2025
+Time   : 23:45:11
+Host   : "DESKTOP-71MJVT3"
+PID    : 27996
+I/O    : uncollated
+Case   : C:/blueCFD-Core/2024/ofuser-of12/run/kado
+nProcs : 1
+SigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Selecting solver incompressibleFluid
+Selecting viscosity model constant
+Selecting turbulence model type RAS
+Selecting RAS turbulence model kEpsilon
+RAS
+{
+    model           kEpsilon;
+    turbulence      on;
+    printCoeffs     on;
+    Cmu             0.09;
+    C1              1.44;
+    C2              1.92;
+    C3              0;
+    sigmak          1;
+    sigmaEps        1.3;
+}
+
+No MRF models present
+
+Courant Number mean: 0 max: 0
+Creating fvModels from "constant/fvModels"
+
+Selecting finite volume model type clouds
+    Name: clouds
+Selecting parcelCloud cloud
+Constructing particle forces
+    Selecting particle force sphereDrag
+    Selecting particle force gravity
+Constructing cloud functions
+    none
+Constructing particle injection models
+Creating injector: roomSeed
+Selecting injection model cellZoneInjection
+    Constructing 3-D injection
+Selecting distribution type fixedValue
+    min/average/max value = 1e-06/1e-06/1e-06
+    cell zone size      = 34500
+    cell zone volume    = 34.5
+    number density      = 208.33
+    number of particles = 7187
+Selecting dispersion model stochasticDispersionRAS
+Selecting patch interaction model localInteraction
+    Interaction fields will not be written
+Selecting stochastic collision model none
+Selecting surface film model none
+Selecting U integration scheme Euler
+
+PIMPLE: No convergence criteria found
+
+
+PIMPLE: Operating solver in transient mode with 1 outer corrector
+PIMPLE: Operating solver in PISO mode
+
+
+
+Starting time loop
+
+Courant Number mean: 0 max: 0
+Time = 0.1s
+
+
+Solving 3-D cloud cloud
+
+Cloud: cloud injector: roomSeed
+    Added 7187 new parcels
+
+Cloud: cloud
+    Current number of parcels       = 7187
+    Current mass in system          = 1.88155e-07
+    Linear momentum                 = (0 0 -5.68413e-12)
+   |Linear momentum|                = 5.68413e-12
+    Linear kinetic energy           = 8.58583e-17
+    roomSeed:
+        number of parcels added     = 7187
+        mass introduced             = 1.88155e-07
+    Parcel fate (number, mass)      : patch ceiling
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch walls
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch outlet
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch inlet
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+
+smoothSolver:  Solving for Ux, Initial residual = 1, Final residual = 6.96855e-06, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 1, Final residual = 6.96855e-06, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 1, Final residual = 7.08175e-06, No Iterations 2
+GAMG:  Solving for p, Initial residual = 1, Final residual = 0.00692684, No Iterations 7
+time step continuity errors : sum local = 1.95007e-06, global = -3.14799e-09
+GAMG:  Solving for p, Initial residual = 0.00392777, Final residual = 8.07133e-07, No Iterations 11
+time step continuity errors : sum local = 9.36239e-09, global = -8.5574e-10, cumulative = -8.5574e-10
+smoothSolver:  Solving for epsilon, Initial residual = 0.0103055, Final residual = 1.3544e-06, No Iterations 2
+smoothSolver:  Solving for k, Initial residual = 1, Final residual = 4.64609e-07, No Iterations 4
+bounding k, min: -0.000489459 max: 0.00613596 average: 0.000153114
+ExecutionTime = 0.552 s  ClockTime = 1 s
+
+Courant Number mean: 0.0153993 max: 0.797983
+Time = 0.2s
+
+
+Solving 3-D cloud cloud
+Cloud: cloud
+    Current number of parcels       = 7187
+    Current mass in system          = 1.88155e-07
+    Linear momentum                 = (1.22998e-09 4.3385e-10 6.16855e-10)
+   |Linear momentum|                = 1.44277e-09
+    Linear kinetic energy           = 3.24435e-11
+    roomSeed:
+        number of parcels added     = 7187
+        mass introduced             = 1.88155e-07
+    Parcel fate (number, mass)      : patch ceiling
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch walls
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch outlet
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch inlet
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+
+smoothSolver:  Solving for Ux, Initial residual = 0.379021, Final residual = 9.87521e-06, No Iterations 16
+smoothSolver:  Solving for Uy, Initial residual = 0.33772, Final residual = 8.55939e-06, No Iterations 15
+smoothSolver:  Solving for Uz, Initial residual = 0.458495, Final residual = 9.26507e-06, No Iterations 35
+GAMG:  Solving for p, Initial residual = 0.0430717, Final residual = 0.000230285, No Iterations 7
+time step continuity errors : sum local = 2.16472e-06, global = -2.13042e-07
+GAMG:  Solving for p, Initial residual = 0.0775342, Final residual = 6.49708e-07, No Iterations 15
+time step continuity errors : sum local = 8.20868e-10, global = 7.05883e-11, cumulative = -7.85152e-10
+smoothSolver:  Solving for epsilon, Initial residual = 0.0771769, Final residual = 8.03781e-06, No Iterations 31
+smoothSolver:  Solving for k, Initial residual = 0.632595, Final residual = 8.06772e-06, No Iterations 47
+ExecutionTime = 0.82 s  ClockTime = 1 s
+
+Courant Number mean: 0.0154128 max: 0.723478
+Time = 0.3s
+
+
+Solving 3-D cloud cloud
+Cloud: cloud
+    Current number of parcels       = 7184
+    Current mass in system          = 1.88077e-07
+    Linear momentum                 = (1.23214e-09 4.39988e-10 6.27748e-10)
+   |Linear momentum|                = 1.45114e-09
+    Linear kinetic energy           = 3.82781e-11
+    roomSeed:
+        number of parcels added     = 7187
+        mass introduced             = 1.88155e-07
+    Parcel fate (number, mass)      : patch ceiling
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch walls
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch outlet
+      - escape                      = 3, 7.85398e-11
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch inlet
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0466751, Final residual = 6.69531e-06, No Iterations 6
+smoothSolver:  Solving for Uy, Initial residual = 0.0767083, Final residual = 8.73457e-06, No Iterations 6
+smoothSolver:  Solving for Uz, Initial residual = 0.212384, Final residual = 9.60431e-06, No Iterations 9
+GAMG:  Solving for p, Initial residual = 0.665575, Final residual = 0.00439717, No Iterations 4
+time step continuity errors : sum local = 2.98169e-06, global = -2.89817e-07
+GAMG:  Solving for p, Initial residual = 0.0852547, Final residual = 6.15553e-07, No Iterations 12
+time step continuity errors : sum local = 5.57607e-10, global = -5.01154e-11, cumulative = -8.35267e-10
+smoothSolver:  Solving for epsilon, Initial residual = 0.176602, Final residual = 8.93305e-06, No Iterations 12
+smoothSolver:  Solving for k, Initial residual = 0.369043, Final residual = 8.80702e-06, No Iterations 19
+ExecutionTime = 0.992 s  ClockTime = 1 s
+
+Courant Number mean: 0.0155042 max: 0.704211
+Time = 0.4s
+
+
+Solving 3-D cloud cloud
+Cloud: cloud
+    Current number of parcels       = 7183
+    Current mass in system          = 1.88051e-07
+    Linear momentum                 = (1.23067e-09 4.41316e-10 6.61751e-10)
+   |Linear momentum|                = 1.46534e-09
+    Linear kinetic energy           = 5.46314e-11
+    roomSeed:
+        number of parcels added     = 7187
+        mass introduced             = 1.88155e-07
+    Parcel fate (number, mass)      : patch ceiling
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch walls
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch outlet
+      - escape                      = 4, 1.0472e-10
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch inlet
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0664365, Final residual = 7.35483e-06, No Iterations 20
+smoothSolver:  Solving for Uy, Initial residual = 0.104005, Final residual = 7.9306e-06, No Iterations 21
+smoothSolver:  Solving for Uz, Initial residual = 0.249072, Final residual = 7.97661e-06, No Iterations 25
+GAMG:  Solving for p, Initial residual = 0.601372, Final residual = 0.00290568, No Iterations 4
+time step continuity errors : sum local = 2.33159e-06, global = -1.83512e-07
+GAMG:  Solving for p, Initial residual = 0.10753, Final residual = 4.80329e-07, No Iterations 14
+time step continuity errors : sum local = 5.05013e-10, global = -4.30154e-11, cumulative = -8.78283e-10
+smoothSolver:  Solving for epsilon, Initial residual = 0.079427, Final residual = 6.67886e-06, No Iterations 14
+smoothSolver:  Solving for k, Initial residual = 0.347031, Final residual = 7.4706e-06, No Iterations 32
+ExecutionTime = 1.225 s  ClockTime = 2 s
+
+Courant Number mean: 0.0156654 max: 0.703164
+Time = 0.5s
+
+
+Solving 3-D cloud cloud
+Cloud: cloud
+    Current number of parcels       = 7180
+    Current mass in system          = 1.87972e-07
+    Linear momentum                 = (1.22946e-09 4.46118e-10 6.44901e-10)
+   |Linear momentum|                = 1.45825e-09
+    Linear kinetic energy           = 4.93976e-11
+    roomSeed:
+        number of parcels added     = 7187
+        mass introduced             = 1.88155e-07
+    Parcel fate (number, mass)      : patch ceiling
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch walls
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch outlet
+      - escape                      = 7, 1.8326e-10
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch inlet
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0944797, Final residual = 9.18895e-06, No Iterations 34
+smoothSolver:  Solving for Uy, Initial residual = 0.165912, Final residual = 8.69115e-06, No Iterations 29
+smoothSolver:  Solving for Uz, Initial residual = 0.381759, Final residual = 9.65763e-06, No Iterations 48
+GAMG:  Solving for p, Initial residual = 0.874051, Final residual = 0.00634933, No Iterations 3
+time step continuity errors : sum local = 1.08302e-05, global = -8.70889e-08
+GAMG:  Solving for p, Initial residual = 0.340604, Final residual = 7.20668e-07, No Iterations 14
+time step continuity errors : sum local = 6.0049e-10, global = 4.59978e-11, cumulative = -8.32285e-10
+smoothSolver:  Solving for epsilon, Initial residual = 0.0507962, Final residual = 5.32226e-06, No Iterations 5
+smoothSolver:  Solving for k, Initial residual = 0.374709, Final residual = 8.19721e-06, No Iterations 39
+ExecutionTime = 1.489 s  ClockTime = 2 s
+
+Courant Number mean: 0.0158231 max: 0.72777
+Time = 0.6s
+
+
+Solving 3-D cloud cloud
+Cloud: cloud
+    Current number of parcels       = 7178
+    Current mass in system          = 1.8792e-07
+    Linear momentum                 = (1.23369e-09 4.49285e-10 6.45557e-10)
+   |Linear momentum|                = 1.46307e-09
+    Linear kinetic energy           = 5.72314e-11
+    roomSeed:
+        number of parcels added     = 7187
+        mass introduced             = 1.88155e-07
+    Parcel fate (number, mass)      : patch ceiling
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch walls
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch outlet
+      - escape                      = 9, 2.35619e-10
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch inlet
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0373885, Final residual = 7.54924e-06, No Iterations 12
+smoothSolver:  Solving for Uy, Initial residual = 0.086541, Final residual = 9.90717e-06, No Iterations 26
+smoothSolver:  Solving for Uz, Initial residual = 0.104699, Final residual = 9.35554e-06, No Iterations 25
+GAMG:  Solving for p, Initial residual = 0.688662, Final residual = 0.00232196, No Iterations 4
+time step continuity errors : sum local = 2.74963e-06, global = -3.51937e-07
+GAMG:  Solving for p, Initial residual = 0.20565, Final residual = 6.98187e-07, No Iterations 13
+time step continuity errors : sum local = 4.26851e-10, global = -2.03033e-11, cumulative = -8.52588e-10
+smoothSolver:  Solving for epsilon, Initial residual = 0.0403803, Final residual = 4.95433e-06, No Iterations 4
+smoothSolver:  Solving for k, Initial residual = 0.0770242, Final residual = 8.0886e-06, No Iterations 19
+ExecutionTime = 1.7 s  ClockTime = 2 s
+
+Courant Number mean: 0.0156703 max: 0.723887
+Time = 0.7s
+
+
+Solving 3-D cloud cloud
+Cloud: cloud
+    Current number of parcels       = 7176
+    Current mass in system          = 1.87867e-07
+    Linear momentum                 = (1.22349e-09 4.48663e-10 6.43085e-10)
+   |Linear momentum|                = 1.4532e-09
+    Linear kinetic energy           = 5.37241e-11
+    roomSeed:
+        number of parcels added     = 7187
+        mass introduced             = 1.88155e-07
+    Parcel fate (number, mass)      : patch ceiling
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch walls
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch outlet
+      - escape                      = 11, 2.87979e-10
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch inlet
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0137121, Final residual = 6.41162e-06, No Iterations 3
+smoothSolver:  Solving for Uy, Initial residual = 0.0286386, Final residual = 4.16481e-06, No Iterations 5
+smoothSolver:  Solving for Uz, Initial residual = 0.03015, Final residual = 3.3424e-06, No Iterations 5
+GAMG:  Solving for p, Initial residual = 0.404672, Final residual = 0.00312376, No Iterations 4
+time step continuity errors : sum local = 1.69242e-06, global = 1.19682e-07
+GAMG:  Solving for p, Initial residual = 0.076853, Final residual = 7.30392e-07, No Iterations 10
+time step continuity errors : sum local = 2.80116e-10, global = 3.36798e-11, cumulative = -8.18908e-10
+smoothSolver:  Solving for epsilon, Initial residual = 0.0225463, Final residual = 9.25026e-06, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0248062, Final residual = 3.82987e-06, No Iterations 5
+ExecutionTime = 1.856 s  ClockTime = 2 s
+
+Courant Number mean: 0.0156064 max: 0.742345
+Time = 0.8s
+
+
+Solving 3-D cloud cloud
+Cloud: cloud
+    Current number of parcels       = 7175
+    Current mass in system          = 1.87841e-07
+    Linear momentum                 = (1.213e-09 4.45781e-10 6.44007e-10)
+   |Linear momentum|                = 1.44389e-09
+    Linear kinetic energy           = 5.44899e-11
+    roomSeed:
+        number of parcels added     = 7187
+        mass introduced             = 1.88155e-07
+    Parcel fate (number, mass)      : patch ceiling
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch walls
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch outlet
+      - escape                      = 12, 3.14159e-10
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch inlet
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0050342, Final residual = 8.06895e-06, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.00839398, Final residual = 1.61338e-06, No Iterations 3
+smoothSolver:  Solving for Uz, Initial residual = 0.0123918, Final residual = 2.25509e-06, No Iterations 4
+GAMG:  Solving for p, Initial residual = 0.142392, Final residual = 0.000752999, No Iterations 4
+time step continuity errors : sum local = 2.77569e-07, global = -2.93972e-08
+GAMG:  Solving for p, Initial residual = 0.0237997, Final residual = 7.10876e-07, No Iterations 9
+time step continuity errors : sum local = 2.36383e-10, global = -6.72465e-12, cumulative = -8.25633e-10
+smoothSolver:  Solving for epsilon, Initial residual = 0.0151456, Final residual = 2.1349e-06, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0205008, Final residual = 7.51868e-06, No Iterations 4
+ExecutionTime = 1.996 s  ClockTime = 2 s
+
+Courant Number mean: 0.0155657 max: 0.757396
+Time = 0.9s
+
+
+Solving 3-D cloud cloud
+Cloud: cloud
+    Current number of parcels       = 7173
+    Current mass in system          = 1.87789e-07
+    Linear momentum                 = (1.21336e-09 4.5341e-10 6.33543e-10)
+   |Linear momentum|                = 1.44194e-09
+    Linear kinetic energy           = 5.33471e-11
+    roomSeed:
+        number of parcels added     = 7187
+        mass introduced             = 1.88155e-07
+    Parcel fate (number, mass)      : patch ceiling
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch walls
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch outlet
+      - escape                      = 14, 3.66519e-10
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch inlet
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+
+smoothSolver:  Solving for Ux, Initial residual = 0.0039113, Final residual = 4.33543e-06, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.00649235, Final residual = 7.82221e-06, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.0107764, Final residual = 8.00083e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.0816433, Final residual = 0.000306196, No Iterations 4
+time step continuity errors : sum local = 1.01227e-07, global = -8.96706e-09
+GAMG:  Solving for p, Initial residual = 0.0182345, Final residual = 5.36853e-07, No Iterations 10
+time step continuity errors : sum local = 1.69571e-10, global = 1.35152e-11, cumulative = -8.12118e-10
+smoothSolver:  Solving for epsilon, Initial residual = 0.0130313, Final residual = 8.44269e-07, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0191658, Final residual = 3.93319e-06, No Iterations 4
+ExecutionTime = 2.134 s  ClockTime = 2 s
+
+Courant Number mean: 0.0155386 max: 0.771331
+Time = 1s
+
+
+Solving 3-D cloud cloud
+Cloud: cloud
+    Current number of parcels       = 7171
+    Current mass in system          = 1.87736e-07
+    Linear momentum                 = (1.21338e-09 4.58629e-10 6.27424e-10)
+   |Linear momentum|                = 1.44093e-09
+    Linear kinetic energy           = 5.02739e-11
+    roomSeed:
+        number of parcels added     = 7187
+        mass introduced             = 1.88155e-07
+    Parcel fate (number, mass)      : patch ceiling
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch walls
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch outlet
+      - escape                      = 16, 4.18879e-10
+      - stick                       = 0, 0
+    Parcel fate (number, mass)      : patch inlet
+      - escape                      = 0, 0
+      - stick                       = 0, 0
+
+smoothSolver:  Solving for Ux, Initial residual = 0.00348746, Final residual = 2.65783e-06, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.00581582, Final residual = 5.06933e-06, No Iterations 2
+smoothSolver:  Solving for Uz, Initial residual = 0.0100578, Final residual = 4.49299e-06, No Iterations 3
+GAMG:  Solving for p, Initial residual = 0.0662499, Final residual = 0.000259677, No Iterations 4
+time step continuity errors : sum local = 8.24865e-08, global = -5.95454e-09
+GAMG:  Solving for p, Initial residual = 0.0158177, Final residual = 7.80675e-07, No Iterations 9
+time step continuity errors : sum local = 2.41783e-10, global = 2.29674e-11, cumulative = -7.89151e-10
+smoothSolver:  Solving for epsilon, Initial residual = 0.0133814, Final residual = 7.97016e-07, No Iterations 3
+smoothSolver:  Solving for k, Initial residual = 0.0176223, Final residual = 2.11774e-06, No Iterations 4
+ExecutionTime = 2.668 s  ClockTime = 3 s
+
+End
+
